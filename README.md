@@ -15,6 +15,10 @@
     User Registration:
         Endpoint: POST /auth/register
         Body:{"name": "John Doe", "email": "johndoe@example.com", "username": "johndoe", "password": "password123"}
+        Response: {
+        "message": "User registration successful"
+        }
+
 
     User Login:
         Endpoint: POST /auth/login
