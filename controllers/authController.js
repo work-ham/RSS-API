@@ -55,7 +55,65 @@ module.exports = {
           res.status(500).json({ message: 'Internal server error' });
         }
     },
- 
+    async changePassword(req, res) {
+      try {
+        const { userId, currentPassword, newPassword } = req.body;
+  
+        const user = await userModel.getUserById(userId);
+        if (!user) {
+          return res.status(404).json({ message: 'User not found' });
+        }
+  
+        const isMatch = await bcrypt.compare(currentPassword, user.password);
+        if (!isMatch) {
+          return res.status(400).json({ message: 'Current password is incorrect' });
+        }
+  
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+  
+        await userModel.updateUserPassword(userId, hashedPassword);
+  
+        res.json({ message: 'Password changed successfully' });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: 'Internal server error' });
+      }
+    },
+  
+    async changeUsername(req, res) {
+      try {
+        const { userId, newUsername } = req.body;
+  
+        const user = await userModel.getUserById(userId);
+        if (!user) {
+          return res.status(404).json({ message: 'User not found' });
+        }
+  
+        await userModel.updateUserUsername(userId, newUsername);
+  
+        res.json({ message: 'Username changed successfully' });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: 'Internal server error' });
+      }
+    },
+    async deleteProfile(req, res) {
+      try {
+        const { userId } = req.body;
+  
+        const user = await userModel.getUserById(userId);
+        if (!user) {
+          return res.status(404).json({ message: 'User not found' });
+        }
+  
+        await userModel.deleteUser(userId);
+  
+        res.json({ message: 'Profile deleted successfully' });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: 'Internal server error' });
+      }
+    },
     async profile(req, res) {
         try {
             const user = req.user;
