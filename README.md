@@ -28,7 +28,7 @@
 
  <p> GET "/auth/profile/"  </p>
 <p>curl -X GET http://localhost:8000/auth/profile \  </p>
-<p>-H "Authorization: Bearer <JWT_TOKEN>"  </p>
+<p>-H "Authorization: Bearer JWT_TOKEN"  </p>
   
  <p> with post man use header and put Authorization as key and Bearer <JWT_TOKEN> as value  </p>
   
