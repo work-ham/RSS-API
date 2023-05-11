@@ -12,24 +12,24 @@
 
 <p>LIST OF ENDPOINTS <br>
     User Registration:<br>
-        Endpoint: POST /auth/register<br><br>
+        Endpoint: POST /auth/register
 
     User Login:<br>
-        Endpoint: POST /auth/login<br><br>
+        Endpoint: POST /auth/login
 
     Get User Profile:<br>
-        Endpoint: GET /auth/profile<br><br>
+        Endpoint: GET /auth/profile
 
     Change Password:<br>
-        Endpoint: PUT /auth/change-password<br><br>
+        Endpoint: PUT /auth/change-password
 
     Change Username:<br>
-        Endpoint: PUT /auth/change-username<br><br>
+        Endpoint: PUT /auth/change-username
 
     Change Email:<br>
-        Endpoint: POST /auth/change-email<br><br>
+        Endpoint: POST /auth/change-email
 
     Delete Profile:<br>
-        Endpoint: DELETE /auth/delete-profile<br><br>
+        Endpoint: DELETE /auth/delete-profile
   
   </p>
