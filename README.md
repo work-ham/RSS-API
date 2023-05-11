@@ -22,7 +22,8 @@
         "name": "John Doe", 
         "email": "johndoe@example.com", 
         "username": "johndoe", 
-        "password": "password123"}
+        "password": "password123"
+        }
         Response: 
         {
         "message": "User registration successful"
