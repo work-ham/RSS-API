@@ -1,4 +1,17 @@
 # test-API RSS
+
+<p> In order the code to run, 
+  GIT init on terminal and make .env file include
+  
+PORT=8000
+DB_HOST=localhost / YOUR_DB_URL
+DB_USER=YOUR_DB USER
+DB_PASSWORD= YOUR_DB_PASSWORD
+DB_NAME= YOUR_DB_NAME
+SECRET_KEY=YOUR_SECRET_KEY
+
+
+</p>
 <p>To test API with postman </p>
 
 <p>Request Body json</p>
