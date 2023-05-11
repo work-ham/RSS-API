@@ -17,7 +17,7 @@
   
     User Registration:
         Endpoint: POST /auth/register
-        Body:
+        Request Body:
         {
         "name": "John Doe", 
         "email": "johndoe@example.com", 
@@ -32,7 +32,7 @@
 
     User Login:
         Endpoint: POST /auth/login
-        Body: {"email": "johndoe@example.com", 
+        Request Body: {"email": "johndoe@example.com", 
         "password": "password123"}
         Response:
         {
@@ -54,7 +54,7 @@
         
     Change Password:
         Endpoint: POST /auth/change-password
-        Body:
+        Request Body:
         { 
         "userId": "123456789", 
         "currentPassword": "oldPassword", 
@@ -68,7 +68,7 @@
 
     Change Username:
         Endpoint: POST /auth/change-username
-        Body:
+        Request Body:
         {
         "userId": "123456789", 
         "newUsername": "newUsername"
@@ -81,7 +81,7 @@
 
     Change Email:
         Endpoint: POST /auth/change-email
-        Body:
+        Request Body:
         { 
         "userId": "123456789", 
         "newEmail": "newemail@example.com"
@@ -93,7 +93,7 @@
 
     Delete Profile:
         Endpoint: DELETE /auth/delete-profile
-        Body:
+        Request Body:
         { 
         "userId": "123456789"
         }
