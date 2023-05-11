@@ -20,10 +20,10 @@
         METHOD: POST
         Request Body:
         {
-        "name": "John Doe", 
-        "email": "johndoe@example.com", 
-        "username": "johndoe", 
-        "password": "password123"
+        "name": "John Doe", as string 
+        "email": "johndoe@example.com", as string 
+        "username": "johndoe", as string 
+        "password": "password123" as string 
         }
         Response: 
         {
@@ -37,13 +37,13 @@
         METHOD: POST
         Request Body: 
         {
-        "email": "johndoe@example.com", 
-        "password": "password123"
+        "email": "johndoe@example.com", as string 
+        "password": "password123"as string 
         }
         Response:
         {
-         "message": "User login successful"
-          "token": "JWT_TOKEN"
+         "message": "User login successful" as string 
+          "token": "JWT_TOKEN" as string 
         }
 
     Get User Profile:
@@ -52,10 +52,10 @@
         Header: Authentication : Bearer JWT_TOKEN
         Response: 
         {
-        "id": "123456",
-        "name": "John Doe",
-        "email": "john@example.com",
-        "username": "johndoe"
+        "id": "123456", as integer
+        "name": "John Doe", as string 
+        "email": "john@example.com", as string 
+        "username": "johndoe" as string 
         }
 
         
@@ -64,13 +64,13 @@
         METHOD: POST
         Request Body:
         { 
-        "userId": "123456789", 
-        "currentPassword": "oldPassword", 
-        "newPassword": "newPassword"
+        "userId": "123456789", as integer
+        "currentPassword": "oldPassword", as string 
+        "newPassword": "newPassword" as string 
         }
         Response:
         {
-        "message": "Password changed successfully"
+        "message": "Password changed successfully" as string 
         }
 
 
@@ -79,12 +79,12 @@
         METHOD: POST
         Request Body:
         {
-        "userId": "123456789", 
-        "newUsername": "newUsername"
+        "userId": "123456789", as integer
+        "newUsername": "newUsername" as string 
         }
         Response:
         {
-         "message": "Username changed successfully"
+         "message": "Username changed successfully" as string 
         }
 
 
@@ -93,12 +93,12 @@
         METHOD: POST
         Request Body:
         { 
-        "userId": "123456789", 
-        "newEmail": "newemail@example.com"
+        "userId": "123456789", as integer
+        "newEmail": "newemail@example.com" as string 
         }
         Response:
          {
-         "message": "Email changed successfully"
+         "message": "Email changed successfully" as string 
          }
 
     Delete Profile:
@@ -106,11 +106,11 @@
         METHOD: DELETE
         Request Body:
         { 
-        "userId": "123456789"
+        "userId": "123456789" as string 
         }
         Response:
         {
-        "message": "Profile deleted successfully"
+        "message": "Profile deleted successfully" as string 
         }
 
   </p>
