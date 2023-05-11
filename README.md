@@ -36,7 +36,8 @@
         Request Body: 
         {
         "email": "johndoe@example.com", 
-        "password": "password123"}
+        "password": "password123"
+        }
         Response:
         {
          "message": "User login successful"
