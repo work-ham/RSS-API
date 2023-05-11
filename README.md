@@ -9,11 +9,3 @@
 <p>DB_PASSWORD= YOUR_DB_PASSWORD</p>
 <p>DB_NAME= YOUR_DB_NAME</p>
 <p>SECRET_KEY=YOUR_SECRET_KEY</p>
-
-<p>List of <br>endpoint </p>
-
-<p> /auth/register </p>
-
-
-  
-
