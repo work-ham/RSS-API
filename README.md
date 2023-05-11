@@ -1,4 +1,4 @@
-# test-API RSS
+# API RSS
 
 <p> In order the code to run, 
   GIT init on terminal and make .env file include</p>
@@ -10,26 +10,34 @@
 <p>DB_NAME= YOUR_DB_NAME</p>
 <p>SECRET_KEY=YOUR_SECRET_KEY</p>
 
-<p>To test API with postman </p>
-
-<p>Request Body json</p>
-<p> POST "/auth/login"  </p>
- <p> {  </p>
-<p>  "identifier": "",  </p>
-<p>  "password": ""  </p>
-<p>}  </p>
+<p>LIST OF ENDPOINTS <br>
   
-<p>  POST "/auth/register"  </p>
-<p>  {
-<p>  "username": "",  </p>
-<p>  "email": "",  </p>
-<p>  "password": ""  </p>
-<p>}  </p>
+    User Registration:
+        Endpoint: POST /auth/register
+        Body:{"name": "John Doe", "email": "johndoe@example.com", "username": "johndoe", "password": "password123"}
 
- <p> GET "/auth/profile/"  </p>
-<p>curl -X GET http://localhost:8000/auth/profile \  </p>
-<p>-H "Authorization: Bearer JWT_TOKEN"  </p>
-  
- <p> with post man use header and put Authorization as key and Bearer <JWT_TOKEN> as value  </p>
-  
+    User Login:
+        Endpoint: POST /auth/login
+        Body: {"email": "johndoe@example.com", "password": "password123"}
 
+    Get User Profile:
+        Endpoint: GET /auth/profile
+        Header: Authentication : Bearer JWT_TOKEN
+        
+    Change Password:
+        Endpoint: POST /auth/change-password
+        Body:{ "userId": "123456789", "currentPassword": "oldPassword", "newPassword": "newPassword"}
+
+    Change Username:
+        Endpoint: POST /auth/change-username
+        Body:{"userId": "123456789", "newUsername": "newUsername"}
+
+    Change Email:
+        Endpoint: POST /auth/change-email
+        Body:{ "userId": "123456789", "newEmail": "newemail@example.com"}
+
+    Delete Profile:
+        Endpoint: DELETE /auth/delete-profile
+        Body:{ "userId": "123456789"}
+  
+  </p>
