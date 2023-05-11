@@ -10,8 +10,9 @@
 <p>DB_NAME= YOUR_DB_NAME</p>
 <p>SECRET_KEY=YOUR_SECRET_KEY</p>
 
-<p> 
-    SQL SCHEMA: <br>
+<p> SQL SCHEMA: <br>
+  
+  
        CREATE TABLE users (
        id INT PRIMARY KEY AUTO_INCREMENT,
        username VARCHAR(255) NOT NULL,
