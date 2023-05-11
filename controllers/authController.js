@@ -17,7 +17,6 @@ module.exports = {
             res.status(500).json({ message: 'Internal server error' });
         }
     },
-
     async login(req, res) {
         try {
           const { identifier, password } = req.body;
@@ -109,6 +108,23 @@ module.exports = {
         await userModel.deleteUser(userId);
   
         res.json({ message: 'Profile deleted successfully' });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: 'Internal server error' });
+      }
+    },
+    async changeEmail(req, res) {
+      try {
+        const { userId, newEmail } = req.body;
+  
+        const user = await userModel.getUserById(userId);
+        if (!user) {
+          return res.status(404).json({ message: 'User not found' });
+        }
+  
+        await userModel.updateUserEmail(userId, newEmail);
+  
+        res.json({ message: 'Email changed successfully' });
       } catch (err) {
         console.log(err);
         res.status(500).json({ message: 'Internal server error' });

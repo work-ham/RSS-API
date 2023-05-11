@@ -37,5 +37,44 @@ module.exports = {
         } catch (err) {
           throw err;
         }
+      },
+      async getUserById(userId) {
+        try {
+          const [rows] = await db.query('SELECT * FROM users WHERE id = ?', [userId]);
+    
+          return rows[0];
+        } catch (err) {
+          throw err;
+        }
+      },
+      async updateUserPassword(userId, newPassword) {
+        try {
+          await db.query('UPDATE users SET password = ? WHERE id = ?', [newPassword, userId]);
+        } catch (err) {
+          throw err;
+        }
+      },
+    
+      async updateUserUsername(userId, newUsername) {
+        try {
+          await db.query('UPDATE users SET username = ? WHERE id = ?', [newUsername, userId]);
+        } catch (err) {
+          throw err;
+        }
+      },
+    
+      async deleteUser(userId) {
+        try {
+          await db.query('DELETE FROM users WHERE id = ?', [userId]);
+        } catch (err) {
+          throw err;
+        }
+    },
+    async updateUserEmail(userId, newEmail) {
+        try {
+          await db.query('UPDATE users SET email = ? WHERE id = ?', [newEmail, userId]);
+        } catch (err) {
+          throw err;
+        }
       }
 };
