@@ -25,11 +25,11 @@
         Header: Authentication : Bearer JWT_TOKEN
         
     Change Password:
-        Endpoint: PUT /auth/change-password
+        Endpoint: POST /auth/change-password
         Body:{ "userId": "123456789", "currentPassword": "oldPassword", "newPassword": "newPassword"}
 
     Change Username:
-        Endpoint: PUT /auth/change-username
+        Endpoint: POST /auth/change-username
         Body:{"userId": "123456789", "newUsername": "newUsername"}
 
     Change Email:
