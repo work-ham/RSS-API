@@ -10,26 +10,10 @@
 <p>DB_NAME= YOUR_DB_NAME</p>
 <p>SECRET_KEY=YOUR_SECRET_KEY</p>
 
-<p>To test API with postman </p>
+<p>List of <br>endpoint </p>
 
-<p>Request Body json</p>
-<p> POST "/auth/login"  </p>
- <p> {  </p>
-<p>  "identifier": "",  </p>
-<p>  "password": ""  </p>
-<p>}  </p>
-  
-<p>  POST "/auth/register"  </p>
-<p>  {
-<p>  "username": "",  </p>
-<p>  "email": "",  </p>
-<p>  "password": ""  </p>
-<p>}  </p>
+<p> /auth/register </p>
 
- <p> GET "/auth/profile/"  </p>
-<p>curl -X GET http://localhost:8000/auth/profile \  </p>
-<p>-H "Authorization: Bearer JWT_TOKEN"  </p>
-  
- <p> with post man use header and put Authorization as key and Bearer <JWT_TOKEN> as value  </p>
+
   
 
