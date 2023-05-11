@@ -10,26 +10,60 @@
 <p>DB_NAME= YOUR_DB_NAME</p>
 <p>SECRET_KEY=YOUR_SECRET_KEY</p>
 
-<p>LIST OF ENDPOINTS <br>
-    User Registration:<br>
+<p>LIST OF ENDPOINTS 
+    User Registration:
         Endpoint: POST /auth/register
+        Body: 
+  {
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "username": "johndoe",
+  "password": "password123"
+}
 
-    User Login:<br>
+    User Login:
         Endpoint: POST /auth/login
+        Body:
+  {
+  "email": "johndoe@example.com",
+  "password": "password123"
+}
 
-    Get User Profile:<br>
+    Get User Profile:
         Endpoint: GET /auth/profile
-
-    Change Password:<br>
+        Header: 
+        Authentication : Bearer JWT_TOKEN
+        
+    Change Password:
         Endpoint: PUT /auth/change-password
+        Body:
+  {
+  "userId": "123456789",
+  "currentPassword": "oldPassword",
+  "newPassword": "newPassword"
+}
 
-    Change Username:<br>
+    Change Username:
         Endpoint: PUT /auth/change-username
+        Body:
+  {
+  "userId": "123456789",
+  "newUsername": "newUsername"
+}
 
-    Change Email:<br>
+    Change Email:
         Endpoint: POST /auth/change-email
+        Body:
+  {
+  "userId": "123456789",
+  "newEmail": "newemail@example.com"
+}
 
-    Delete Profile:<br>
+    Delete Profile:
         Endpoint: DELETE /auth/delete-profile
+        Body:
+  {
+  "userId": "123456789"
+}
   
   </p>
