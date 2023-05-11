@@ -1,7 +1,7 @@
 # API RSS
 
 <p> In order the code to run, 
-  GIT init on terminal and make .env file include</p>
+  NPM init on terminal and make .env file include</p>
   
 <p>PORT=8000</p>
 <p>DB_HOST=localhost / YOUR_DB_URL</p>
