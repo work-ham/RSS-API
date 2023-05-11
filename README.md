@@ -11,21 +11,14 @@
 <p>SECRET_KEY=YOUR_SECRET_KEY</p>
 
 <p>LIST OF ENDPOINTS <br>
+  
     User Registration:
         Endpoint: POST /auth/register
-        Body:{
-  "name": "John Doe",
-  "email": "johndoe@example.com",
-  "username": "johndoe",
-  "password": "password123"
-}
+        Body:{"name": "John Doe", "email": "johndoe@example.com", "username": "johndoe", "password": "password123"}
 
     User Login:
         Endpoint: POST /auth/login
-        Body: {
-  "email": "johndoe@example.com",
-  "password": "password123"
-}
+        Body: {"email": "johndoe@example.com", "password": "password123"}
 
     Get User Profile:
         Endpoint: GET /auth/profile
@@ -33,30 +26,18 @@
         
     Change Password:
         Endpoint: PUT /auth/change-password
-        Body:{
-  "userId": "123456789",
-  "currentPassword": "oldPassword",
-  "newPassword": "newPassword"
-}
+        Body:{ "userId": "123456789", "currentPassword": "oldPassword", "newPassword": "newPassword"}
 
     Change Username:
         Endpoint: PUT /auth/change-username
-        Body:{
-  "userId": "123456789",
-  "newUsername": "newUsername"
-}
+        Body:{"userId": "123456789", "newUsername": "newUsername"}
 
     Change Email:
         Endpoint: POST /auth/change-email
-        Body:{
-  "userId": "123456789",
-  "newEmail": "newemail@example.com"
-}
+        Body:{ "userId": "123456789", "newEmail": "newemail@example.com"}
 
     Delete Profile:
         Endpoint: DELETE /auth/delete-profile
-        Body:{
-  "userId": "123456789"
-}
+        Body:{ "userId": "123456789"}
   
   </p>
