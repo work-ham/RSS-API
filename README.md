@@ -69,6 +69,7 @@
     Change Password:
         URL:/auth/change-password
         METHOD: POST
+        Header: Authentication : Bearer JWT_TOKEN
         Request Body:
         { 
         "userId": "123456789", as integer
@@ -83,7 +84,8 @@
 
     Change Username:
         URL:/auth/change-username
-        METHOD: POST
+        METHOD: POS
+        Header: Authentication : Bearer JWT_TOKEN
         Request Body:
         {
         "userId": "123456789", as integer
@@ -98,6 +100,7 @@
     Change Email:
         URL:/auth/change-email
         METHOD: POST
+        Header: Authentication : Bearer JWT_TOKEN
         Request Body:
         { 
         "userId": "123456789", as integer
@@ -111,6 +114,7 @@
     Delete Profile:
         URL:/auth/delete-profile
         METHOD: DELETE
+        Header: Authentication : Bearer JWT_TOKEN
         Request Body:
         { 
         "userId": "123456789" as string 
