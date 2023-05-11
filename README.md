@@ -27,8 +27,8 @@
         }
         Response: 
         {
-        "message": "User registration successful"
-        "userId": 1
+        "message": "User registration successful" as string 
+        "userId": 1 as integer
         }
 
 
