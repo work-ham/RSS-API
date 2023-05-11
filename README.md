@@ -54,7 +54,9 @@
         
     Change Password:
         Endpoint: POST /auth/change-password
-        Body:{ "userId": "123456789", 
+        Body:
+        { 
+        "userId": "123456789", 
         "currentPassword": "oldPassword", 
         "newPassword": "newPassword"
         }
