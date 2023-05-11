@@ -32,7 +32,9 @@
 
     User Login:
         Endpoint: POST /auth/login
-        Request Body: {"email": "johndoe@example.com", 
+        Request Body: 
+        {
+        "email": "johndoe@example.com", 
         "password": "password123"}
         Response:
         {
