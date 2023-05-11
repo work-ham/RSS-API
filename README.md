@@ -28,7 +28,7 @@
         Request Body:
         {
         "name": "John Doe", as string 
-        "email": "johndoe@example.com", as string 
+        "email": "johndoe@example.com", as string must unique
         "username": "johndoe", as string 
         "password": "password123" as string 
         }
