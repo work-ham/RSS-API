@@ -16,7 +16,8 @@
 <p>LIST OF ENDPOINTS <br>
   
     User Registration:
-        Endpoint: POST /auth/register
+        URL:/auth/register
+        METHOD: POST
         Request Body:
         {
         "name": "John Doe", 
@@ -32,7 +33,8 @@
 
 
     User Login:
-        Endpoint: POST /auth/login
+        URL:/auth/login
+        METHOD: POST
         Request Body: 
         {
         "email": "johndoe@example.com", 
@@ -45,7 +47,8 @@
         }
 
     Get User Profile:
-        Endpoint: GET /auth/profile
+        URL:/auth/profile
+        METHOD: GET
         Header: Authentication : Bearer JWT_TOKEN
         Response: 
         {
@@ -57,7 +60,8 @@
 
         
     Change Password:
-        Endpoint: POST /auth/change-password
+        URL:/auth/change-password
+        METHOD: POST
         Request Body:
         { 
         "userId": "123456789", 
@@ -71,7 +75,8 @@
 
 
     Change Username:
-        Endpoint: POST /auth/change-username
+        URL:/auth/change-username
+        METHOD: POST
         Request Body:
         {
         "userId": "123456789", 
@@ -84,7 +89,8 @@
 
 
     Change Email:
-        Endpoint: POST /auth/change-email
+        URL:/auth/change-email
+        METHOD: POST
         Request Body:
         { 
         "userId": "123456789", 
@@ -96,7 +102,8 @@
          }
 
     Delete Profile:
-        Endpoint: DELETE /auth/delete-profile
+        URL:/auth/delete-profile
+        METHOD: DELETE
         Request Body:
         { 
         "userId": "123456789"
