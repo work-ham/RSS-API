@@ -10,38 +10,94 @@
 <p>DB_NAME= YOUR_DB_NAME</p>
 <p>SECRET_KEY=YOUR_SECRET_KEY</p>
 
+<p> SQL SCHEMA </p>
+    
+
 <p>LIST OF ENDPOINTS <br>
   
     User Registration:
         Endpoint: POST /auth/register
-        Body:{"name": "John Doe", "email": "johndoe@example.com", "username": "johndoe", "password": "password123"}
-        Response: {
+        Body:
+        {
+        "name": "John Doe", 
+        "email": "johndoe@example.com", 
+        "username": "johndoe", 
+        "password": "password123"}
+        Response: 
+        {
         "message": "User registration successful"
+        "userId": 1
         }
 
 
     User Login:
         Endpoint: POST /auth/login
-        Body: {"email": "johndoe@example.com", "password": "password123"}
+        Body: {"email": "johndoe@example.com", 
+        "password": "password123"}
+        Response:
+        {
+         "message": "User login successful"
+          "token": "JWT_TOKEN"
+        }
 
     Get User Profile:
         Endpoint: GET /auth/profile
         Header: Authentication : Bearer JWT_TOKEN
+        Response: 
+        {
+        "id": "123456",
+        "name": "John Doe",
+        "email": "john@example.com",
+        "username": "johndoe"
+        }
+
         
     Change Password:
         Endpoint: POST /auth/change-password
-        Body:{ "userId": "123456789", "currentPassword": "oldPassword", "newPassword": "newPassword"}
+        Body:{ "userId": "123456789", 
+        "currentPassword": "oldPassword", 
+        "newPassword": "newPassword"
+        }
+        Response:
+        {
+        "message": "Password changed successfully"
+        }
+
 
     Change Username:
         Endpoint: POST /auth/change-username
-        Body:{"userId": "123456789", "newUsername": "newUsername"}
+        Body:
+        {
+        "userId": "123456789", 
+        "newUsername": "newUsername"
+        }
+        Response:
+        {
+         "message": "Username changed successfully"
+        }
+
 
     Change Email:
         Endpoint: POST /auth/change-email
-        Body:{ "userId": "123456789", "newEmail": "newemail@example.com"}
+        Body:
+        { 
+        "userId": "123456789", 
+        "newEmail": "newemail@example.com"
+        }
+        Response:
+         {
+         "message": "Email changed successfully"
+         }
 
     Delete Profile:
         Endpoint: DELETE /auth/delete-profile
-        Body:{ "userId": "123456789"}
-  
+        Body:
+        { 
+        "userId": "123456789"
+        }
+        Response:
+        {
+        "message": "Profile deleted successfully"
+        }
+
   </p>
