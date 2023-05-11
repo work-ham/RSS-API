@@ -1,4 +1,4 @@
-# test-API RSS
+# API RSS
 
 <p> In order the code to run, 
   GIT init on terminal and make .env file include</p>
