@@ -13,8 +13,7 @@
 <p>LIST OF ENDPOINTS 
     User Registration:
         Endpoint: POST /auth/register
-        Body: 
-  {
+        Body:{
   "name": "John Doe",
   "email": "johndoe@example.com",
   "username": "johndoe",
@@ -23,21 +22,18 @@
 
     User Login:
         Endpoint: POST /auth/login
-        Body:
-  {
+        Body: {
   "email": "johndoe@example.com",
   "password": "password123"
 }
 
     Get User Profile:
         Endpoint: GET /auth/profile
-        Header: 
-        Authentication : Bearer JWT_TOKEN
+        Header: Authentication : Bearer JWT_TOKEN
         
     Change Password:
         Endpoint: PUT /auth/change-password
-        Body:
-  {
+        Body:{
   "userId": "123456789",
   "currentPassword": "oldPassword",
   "newPassword": "newPassword"
@@ -45,24 +41,21 @@
 
     Change Username:
         Endpoint: PUT /auth/change-username
-        Body:
-  {
+        Body:{
   "userId": "123456789",
   "newUsername": "newUsername"
 }
 
     Change Email:
         Endpoint: POST /auth/change-email
-        Body:
-  {
+        Body:{
   "userId": "123456789",
   "newEmail": "newemail@example.com"
 }
 
     Delete Profile:
         Endpoint: DELETE /auth/delete-profile
-        Body:
-  {
+        Body:{
   "userId": "123456789"
 }
   
