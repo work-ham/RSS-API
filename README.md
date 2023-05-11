@@ -10,7 +10,7 @@
 <p>DB_NAME= YOUR_DB_NAME</p>
 <p>SECRET_KEY=YOUR_SECRET_KEY</p>
 
-<p>LIST OF ENDPOINTS 
+<p>LIST OF ENDPOINTS <br>
     User Registration:
         Endpoint: POST /auth/register
         Body:{
