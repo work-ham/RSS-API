@@ -27,15 +27,17 @@
         METHOD: POST
         Request Body:
         {
-        "name": "John Doe", as string 
         "email": "johndoe@example.com", as string must unique
         "username": "johndoe", as string 
         "password": "password123" as string 
+        "name": "John Doe", as string 
         }
         Response: 
         {
-        "message": "User registration successful" as string 
-        "userId": 1 as integer
+    "message": "Login successful",
+    "name": "John Doe",
+    "username": "Jhondoe",
+    "token": "JWT_TOKEN"
         }
 
 
