@@ -52,8 +52,12 @@
         }
         Response:
         {
-         "message": "User login successful" as string 
-          "token": "JWT_TOKEN" as string 
+         "message": "User login successful", as string 
+         "name": "jhon Doe", as string 
+         "username": "johndoe", as string 
+         "email": "johndoe@example.com", as string 
+         "userId": 2, as integer
+         "token": "JWT_TOKEN" as string 
         }
 
     Get User Profile:
