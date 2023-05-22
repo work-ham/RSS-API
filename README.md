@@ -44,7 +44,7 @@
         METHOD: POST
         Request Body: 
         {
-        "email": "johndoe@example.com", as string 
+        "identification": "johndoe@example.com", as string 
         "password": "password123"as string 
         }
         Response:

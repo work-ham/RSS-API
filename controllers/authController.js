@@ -7,9 +7,9 @@ dotenv.config();
 module.exports = {
     async register(req, res) {
         try {
-            const { username, email, password } = req.body;
+            const { username, email, password, name} = req.body;
 
-            const userId = await userModel.createUser(username, email, password);
+            const userId = await userModel.createUser(username, email, password, name);
 
             res.json({ message: 'User created successfully', userId });
         } catch (err) {
@@ -32,23 +32,23 @@ module.exports = {
           }
     
           if (!user) {
-            return res.status(400).json({ message: 'Invalid credentials' });
+            return res.status(400).json({ message: 'Wrong email / username' });
           }
     
           const isMatch = await bcrypt.compare(password, user.password);
           if (!isMatch) {
-            return res.status(400).json({ message: 'Invalid credentials' });
+            return res.status(400).json({ message: 'Wrong password' });
           }
     
           const payload = {
             id: user.id,
             username: user.username,
             email: user.email,
+            name : user.name
           };
     
           const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: '1h' });
-    
-          res.json({ message: 'Login successful', token });
+          res.json({ message: 'Login successful', name: user['name'], username: user['username'], email: user['email'], userId: user['id'], token});
         } catch (err) {
           console.log(err);
           res.status(500).json({ message: 'Internal server error' });

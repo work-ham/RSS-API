@@ -2,7 +2,7 @@ const db = require('../config/db');
 const bcrypt = require('bcrypt');
 
 module.exports = {
-    async createUser(username, email, password) {
+    async createUser(username, email, password, name) {
         try {
 
             const [rows] = await db.query('SELECT * FROM users WHERE email = ?', [email]);
@@ -14,7 +14,7 @@ module.exports = {
             const salt = await bcrypt.genSalt(10);
             const hashedPassword = await bcrypt.hash(password, salt);
 
-            const [result] = await db.query('INSERT INTO users (username, email, password) VALUES (?, ?, ?)', [username, email, hashedPassword]);
+            const [result] = await db.query('INSERT INTO users (username, email, password, name) VALUES (?, ?, ?, ?)', [username, email, hashedPassword, name]);
 
             return result.insertId;
         } catch (err) {
