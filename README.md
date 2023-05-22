@@ -1,7 +1,7 @@
 # API RSS
 
 <p> In order the code to run, 
-  NPM init on terminal and make .env file include</p>
+  NPM install on terminal and make .env file include</p>
   
 <p>PORT=8000</p>
 <p>DB_HOST=localhost / YOUR_DB_URL</p>
@@ -15,9 +15,10 @@
   
        CREATE TABLE users (
        id INT PRIMARY KEY AUTO_INCREMENT,
-       username VARCHAR(255) NOT NULL,
+       username VARCHAR(255) NOT NULL UNIQUE,
        email VARCHAR(255) NOT NULL UNIQUE,
-       password VARCHAR(255) NOT NULL
+       password VARCHAR(255) NOT NULL,
+       name VARCHAR(255) NOT NULL
        );   
 </p>
 <p>LIST OF ENDPOINTS <br>
@@ -27,15 +28,17 @@
         METHOD: POST
         Request Body:
         {
-        "name": "John Doe", as string 
         "email": "johndoe@example.com", as string must unique
-        "username": "johndoe", as string 
+        "username": "johndoe", as string must unique
         "password": "password123" as string 
+        "name": "John Doe", as string 
         }
         Response: 
         {
-        "message": "User registration successful" as string 
-        "userId": 1 as integer
+    "message": "Login successful",
+    "name": "John Doe",
+    "username": "Jhondoe",
+    "token": "JWT_TOKEN"
         }
 
 
@@ -49,8 +52,12 @@
         }
         Response:
         {
-         "message": "User login successful" as string 
-          "token": "JWT_TOKEN" as string 
+         "message": "User login successful", as string 
+         "name": "jhon Doe", as string 
+         "username": "johndoe", as string 
+         "email": "johndoe@example.com", as string 
+         "userId": 2, as integer
+         "token": "JWT_TOKEN" as string 
         }
 
     Get User Profile:
@@ -69,6 +76,7 @@
     Change Password:
         URL:/auth/change-password
         METHOD: POST
+        Header: Authentication : Bearer JWT_TOKEN
         Request Body:
         { 
         "userId": "123456789", as integer
@@ -83,7 +91,8 @@
 
     Change Username:
         URL:/auth/change-username
-        METHOD: POST
+        METHOD: POS
+        Header: Authentication : Bearer JWT_TOKEN
         Request Body:
         {
         "userId": "123456789", as integer
@@ -98,6 +107,7 @@
     Change Email:
         URL:/auth/change-email
         METHOD: POST
+        Header: Authentication : Bearer JWT_TOKEN
         Request Body:
         { 
         "userId": "123456789", as integer
@@ -111,6 +121,7 @@
     Delete Profile:
         URL:/auth/delete-profile
         METHOD: DELETE
+        Header: Authentication : Bearer JWT_TOKEN
         Request Body:
         { 
         "userId": "123456789" as string 
