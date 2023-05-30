@@ -21,7 +21,7 @@
        name VARCHAR(255) NOT NULL
        );   
 </p>
-<p>LIST OF ENDPOINTS <br>
+<p>LIST OF ENDPOINT URL <br>
   
     User Registration:
         URL:/auth/register
