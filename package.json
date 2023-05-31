@@ -59,6 +59,7 @@
     "seq-queue": "^0.0.5",
     "set-blocking": "^2.0.0",
     "setprototypeof": "^1.2.0",
+    "swagger-ui-express": "^4.6.3",
     "tr46": "^0.0.3",
     "type-is": "^1.6.18",
     "unpipe": "^1.0.0",
@@ -67,11 +68,13 @@
     "vary": "^1.1.2",
     "webidl-conversions": "^3.0.1",
     "whatwg-url": "^5.0.0",
-    "wrappy": "^1.0.2"
+    "wrappy": "^1.0.2",
+    "yamljs": "^0.3.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "start-dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",

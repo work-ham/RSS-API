@@ -1,0 +1,229 @@
+openapi: 3.0.0
+info:
+  title: Traffic Sign Detector API
+  description: API documentation for the Traffic Sign Detector mobile app
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+  - url: https://backend-dot-dulcet-clock-385809.uc.r.appspot.com
+paths:
+  /auth/register:
+    post:
+      summary: User Registration
+      description: Register a new user
+      parameters:
+        - name: username
+          in: username
+          description: User's username
+          required: true
+          type: string
+        - name: email
+          in: email
+          description: User's email address
+          required: true
+          type: string
+        - name: password
+          in: password
+          description: User's password
+          required: true
+          type: string
+        - name: name
+          in: name
+          description: User's name
+          required: true
+          type: string
+      responses:
+        200:
+          description: User registered successfully
+        400:
+          description: Bad Request - Invalid input data
+  /auth/login:
+    post:
+      summary: User Login
+      description: Authenticate and login a user
+      parameters:
+        - name: identifier
+          in: formData
+          description: User's username/email address
+          required: true
+          type: string
+        - name: password
+          in: formData
+          description: User's password
+          required: true
+          type: string
+      responses:
+        200:
+          description: User logged in successfully
+        401:
+          description: Unauthorized - Invalid credentials
+    /auth/profile:
+    get:
+      summary: Get User Profile
+      description: Retrieve the user's profile information
+      parameters:
+        - name: Authorization
+          in: header
+          description: Access token obtained from the login API
+          required: true
+          type: string
+      responses:
+        200:
+          description: User profile retrieved successfully
+        401:
+          description: Unauthorized - Invalid or expired access token
+  /auth/change-password:
+    post:
+    post:
+      summary: Change Password
+      description: Change the user's password
+      parameters:
+        - name: Authorization
+          in: header
+          description: Access token obtained from the login API
+          required: true
+          type: string
+        - name: newPassword
+          in: formData
+          description: New password for the user
+          required: true
+          type: string
+      responses:
+        200:
+          description: Password changed successfully
+        401:
+          description: Unauthorized - Invalid or expired access token
+        400:
+          description: Bad Request - Invalid input data
+  /auth/change-username:
+    post:
+      summary: Change Username
+      description: Change the user's username
+      parameters:
+        - name: Authorization
+          in: header
+          description: Access token obtained from the login API
+          required: true
+          type: string
+        - name: newUsername
+          in: formData
+          description: New username for the user
+          required: true
+          type: string
+      responses:
+        200:
+          description: Username changed successfully
+        401:
+          description: Unauthorized - Invalid or expired access token
+        400:
+          description: Bad Request - Invalid input data
+  /api/user/delete-profile:
+    delete:
+      summary: Delete User Profile
+      description: Delete the user's profile
+      parameters:
+        - name: Authorization
+          in: header
+          description: Access token obtained from the login API
+          required: true
+          type: string
+      responses:
+        200:
+          description: User profile deleted successfully
+        401:
+          description: Unauthorized - Invalid or expired access token
+  /api/user/change-email:
+    post:
+      summary: Change Email
+      description: Change the user's email address
+      parameters:
+        - name: Authorization
+          in: header
+          description: Access token obtained from the login API
+          required: true
+          type: string
+        - name: newEmail
+          in: formData
+          description: New email address for the user
+          required: true
+          type: string
+          format: email
+      responses:
+        200:
+          description: Email address changed successfully
+        401:
+          description: Unauthorized - Invalid or expired access token
+        400:
+          description: Bad Request - Invalid input data
+  # Add more paths for other endpoints
+components:
+    schemas:
+      UserRegister:
+        type: object
+        properties:
+          name:
+            type: string
+          email:
+            type: string
+          username:
+            type: string
+          password:
+            type: string
+        required:
+          - name
+          - email
+          - username
+          - password
+      Login:
+        type: object
+        properties:
+          identifier:
+            type: string
+          password:
+            type: string
+        required:
+          - email
+          - password
+      ChangePassword:
+        type: object
+        properties:
+          userId:
+            type: integer
+          currentPassword:
+            type: string
+          newPassword:
+            type: string
+        required:
+          - userId
+          - currentPassword
+          - newPassword
+      ChangeUsername:
+        type: object
+        properties:
+          userId:
+            type: integer
+          newUsername:
+            type: string
+        required:
+          - userId
+          - newUsername
+      ChangeEmail:
+        type: object
+        properties:
+          userId:
+            type: integer
+          newEmail:
+            type: string
+        required:
+          - userId
+          - newEmail
+      DeleteProfile:
+        type: object
+        properties:
+          userId:
+            type: integer
+        required:
+          - userId
+
+      
+      
