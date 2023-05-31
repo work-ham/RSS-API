@@ -21,7 +21,7 @@
        name VARCHAR(255) NOT NULL
        );   
 </p>
-<p>LIST OF ENDPOINTS <br>
+<p>LIST OF ENDPOINT URL <br>
   
     User Registration:
         URL:/auth/register
@@ -37,8 +37,7 @@
         {
     "message": "Login successful",
     "name": "John Doe",
-    "username": "Jhondoe",
-    "token": "JWT_TOKEN"
+    "username": "Jhondoe"
         }
 
 
