@@ -57,7 +57,7 @@ paths:
           description: User logged in successfully
         401:
           description: Unauthorized - Invalid credentials
-    /auth/profile:
+  /auth/profile:
     get:
       summary: Get User Profile
       description: Retrieve the user's profile information
@@ -73,7 +73,6 @@ paths:
         401:
           description: Unauthorized - Invalid or expired access token
   /auth/change-password:
-    post:
     post:
       summary: Change Password
       description: Change the user's password
@@ -117,7 +116,7 @@ paths:
           description: Unauthorized - Invalid or expired access token
         400:
           description: Bad Request - Invalid input data
-  /api/user/delete-profile:
+  /auth/delete-profile:
     delete:
       summary: Delete User Profile
       description: Delete the user's profile
@@ -132,7 +131,7 @@ paths:
           description: User profile deleted successfully
         401:
           description: Unauthorized - Invalid or expired access token
-  /api/user/change-email:
+  /auth/change-email:
     post:
       summary: Change Email
       description: Change the user's email address
