@@ -11,27 +11,12 @@ paths:
     post:
       summary: User Registration
       description: Register a new user
-      parameters:
-        - name: username
-          in: username
-          description: User's username
-          required: true
-          type: string
-        - name: email
-          in: email
-          description: User's email address
-          required: true
-          type: string
-        - name: password
-          in: password
-          description: User's password
-          required: true
-          type: string
-        - name: name
-          in: name
-          description: User's name
-          required: true
-          type: string
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/UserRegister'
       responses:
         200:
           description: User registered successfully
@@ -41,17 +26,12 @@ paths:
     post:
       summary: User Login
       description: Authenticate and login a user
-      parameters:
-        - name: identifier
-          in: formData
-          description: User's username/email address
-          required: true
-          type: string
-        - name: password
-          in: formData
-          description: User's password
-          required: true
-          type: string
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Login'
       responses:
         200:
           description: User logged in successfully
@@ -61,12 +41,8 @@ paths:
     get:
       summary: Get User Profile
       description: Retrieve the user's profile information
-      parameters:
-        - name: Authorization
-          in: header
-          description: Access token obtained from the login API
-          required: true
-          type: string
+      security:
+        - BearerAuth: []
       responses:
         200:
           description: User profile retrieved successfully
@@ -74,19 +50,16 @@ paths:
           description: Unauthorized - Invalid or expired access token
   /auth/change-password:
     post:
-      summary: Change Password
-      description: Change the user's password
-      parameters:
-        - name: Authorization
-          in: header
-          description: Access token obtained from the login API
-          required: true
-          type: string
-        - name: newPassword
-          in: formData
-          description: New password for the user
-          required: true
-          type: string
+      summary: Change user password
+      description: Endpoint to change user password
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ChangePassword'
       responses:
         200:
           description: Password changed successfully
@@ -96,19 +69,16 @@ paths:
           description: Bad Request - Invalid input data
   /auth/change-username:
     post:
-      summary: Change Username
-      description: Change the user's username
-      parameters:
-        - name: Authorization
-          in: header
-          description: Access token obtained from the login API
-          required: true
-          type: string
-        - name: newUsername
-          in: formData
-          description: New username for the user
-          required: true
-          type: string
+      summary: Change username
+      description: Endpoint to change user's username
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ChangeUsernameRequest'
       responses:
         200:
           description: Username changed successfully
@@ -120,12 +90,8 @@ paths:
     delete:
       summary: Delete User Profile
       description: Delete the user's profile
-      parameters:
-        - name: Authorization
-          in: header
-          description: Access token obtained from the login API
-          required: true
-          type: string
+      security:
+        - BearerAuth: []
       responses:
         200:
           description: User profile deleted successfully
@@ -133,20 +99,16 @@ paths:
           description: Unauthorized - Invalid or expired access token
   /auth/change-email:
     post:
-      summary: Change Email
-      description: Change the user's email address
-      parameters:
-        - name: Authorization
-          in: header
-          description: Access token obtained from the login API
-          required: true
-          type: string
-        - name: newEmail
-          in: formData
-          description: New email address for the user
-          required: true
-          type: string
-          format: email
+      summary: Change email
+      description: Endpoint to change user's email
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ChangeEmailRequest'
       responses:
         200:
           description: Email address changed successfully
@@ -156,6 +118,13 @@ paths:
           description: Bad Request - Invalid input data
   # Add more paths for other endpoints
 components:
+    securitySchemes:
+      BearerAuth:
+        type: apiKey
+        in: header
+        name: Authorization
+        description: Bearer token for authorization 
+    
     schemas:
       UserRegister:
         type: object
@@ -181,7 +150,7 @@ components:
           password:
             type: string
         required:
-          - email
+          - identifier
           - password
       ChangePassword:
         type: object
@@ -223,6 +192,15 @@ components:
             type: integer
         required:
           - userId
-
+      SuccessResponse:
+        type: object
+        properties:
+          message:
+            type: string
+      ErrorResponse:
+        type: object
+        properties:
+          error:
+            type: string
       
       
