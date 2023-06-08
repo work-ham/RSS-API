@@ -5,7 +5,6 @@ FOLDER_NAME="API-ML"
 
 mv "$FOLDER_NAME" ../
 
-
 echo "runtime: nodejs18" > ../app.yaml
 echo "service: backend" >> ../app.yaml
 echo "" >> ../app.yaml
@@ -31,6 +30,8 @@ gcloud app deploy
 cd ..
 
 cd API-ML
+
+git clone https://github.com/ultralytics/yolov5.git
 
 gcloud config set app/cloud_build_timeout 1800
 

@@ -1,0 +1,22 @@
+Flask
+gunicorn
+werkzeug>=2.2.3
+flask-restful
+Pillow
+pandas
+opencv-python
+numpy
+uwsgi
+torchvision
+torch
+yolov5
+gitpython
+matplotlib
+numpy
+psutil  # system resources
+PyYAML
+requests
+scipy>=1.4.1
+thop>=0.1.1  # FLOPs computation
+tqdm>=4.64.0
+ultralytics>=8.0.111
