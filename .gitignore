@@ -2,4 +2,3 @@
 node_modules
 -H
 app.yaml
-database.sql
