@@ -70,11 +70,12 @@ _Below is an example of how this app will be deployed with app engine this is ho
      ./deploy.sh
      ```
 <p align="right">(<a href="#top">back to top</a>)</p>
-<!-- CONTACT -->     
+
+<!-- CONTACT -->
 ### Contact
 Ilham - [Github](https://github.com/work-ham), [LinkedIn](https://www.linkedin.com/in/ilham-kus/)
 Wawan - [LinkedIn](https://www.linkedin.com/in/wawan11/)
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
