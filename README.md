@@ -69,8 +69,8 @@ _Below is an example of how you can instruct this app will be deployed with app 
      ```sh
      ./deploy.sh
      ```
- 
-##Contact
+     
+###Contact
 Ilham - [Github](https://github.com/work-ham), [LinkedIn](https://www.linkedin.com/in/ilham-kus/)
 Wawan - [LinkedIn](https://www.linkedin.com/in/wawan11/)
 
