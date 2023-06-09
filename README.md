@@ -5,8 +5,8 @@
 Hello and welcome to RSS(Road Sign Spotter)-sql-rest-api project repository for the cloud computing! 
 
 As the we mentioned before, this repository is used as the primary working repository for cloud computing side of the RSS(Road Sign Spotter) project done as part of Bangkit 2023's Product-based Capstone Project built in Node JS with Express JS and Python with Flask.
-
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 ### This applications built with
 
 * [Express JS](https://expressjs.com/)
@@ -14,7 +14,7 @@ As the we mentioned before, this repository is used as the primary working repos
 * other libraries included in "package.json" and "requiremnts.txt" file
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-<!-- GETTING STARTED -->
+
 ## Getting Started
 
 Before replicating this project, make sure you have [Git](https://git-scm.com/downloads) installed on your computer.
@@ -69,6 +69,7 @@ _Below is an example of how you can instruct this app will be deployed with app 
      ```sh
      ./deploy.sh
      ```
+ 
 ##Contact
 Ilham - [Github](https://github.com/work-ham), [LinkedIn](https://www.linkedin.com/in/ilham-kus/)
 Wawan - [LinkedIn](https://www.linkedin.com/in/wawan11/)
