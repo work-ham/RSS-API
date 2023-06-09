@@ -1,7 +1,10 @@
 #!/bin/bash
 
 FOLDER_NAME="API-ML"
-
+DATABASE_PUBLIC_IP="YOUR_DATABASE_PUBLIC_IP"
+DATABASE_PASSWORD="YOUR_DATABASE_PASSWORD"
+DATABASE_NAME="YOUR_DATABASE_NAME"
+API_KEY="YOUR_API_KEY"
 
 mv "$FOLDER_NAME" ../
 
@@ -10,19 +13,19 @@ echo "service: backend" >> ./app.yaml
 echo "" >> ./app.yaml
 echo "env_variables:" >> ./app.yaml
 echo "  PORT: \"8080\"" >> ./app.yaml
-echo "  DB_HOST: \"YOUR_DATABASE_PUBLIC_IP\"" >> ./app.yaml
+echo "  DB_HOST: \"$DATABASE_PUBLIC_IP\"" >> ./app.yaml
 echo "  DB_USER: \"root\"" >> ./app.yaml
-echo "  DB_PASSWORD: \"YOUR_DATABASE_PASSWORD\"" >> ./app.yaml
-echo "  DB_NAME: \"YOUR_DATABASE_NAME\"" >> ./app.yaml
-echo "  SECRET_KEY: \"YOUR_API_KEY\"" >> ./app.yaml
+echo "  DB_PASSWORD: \"$DATABASE_PASSWORD\"" >> ./app.yaml
+echo "  DB_NAME: \"$DATABASE_NAME\"" >> ./app.yaml
+echo "  SECRET_KEY: \"$API_KEY\"" >> ./app.yaml
 
 
 echo "PORT=8080" > ./.env
-echo "DB_HOST=YOUR_DATABASE_PUBLIC_IP" >> ./.env
+echo "DB_HOST=$DATABASE_PUBLIC_IP" >> ./.env
 echo "DB_USER=root" >> ./.env
-echo "DB_PASSWORD=YOUR_DATABASE_PASSWORD" >> ./.env
-echo "DB_NAME=YOUR_DATABASE_NAME" >> ./.env
-echo "SECRET_KEY=YOUR_API_KEY" >> ./.env
+echo "DB_PASSWORD=$DATABASE_PASSWORD" >> ./.env
+echo "DB_NAME=$DATABASE_NAME" >> ./.env
+echo "SECRET_KEY=$API_KEY" >> ./.env
 
 
 gcloud app deploy 
@@ -53,4 +56,4 @@ git clone https://github.com/ultralytics/yolov5.git
 
 gcloud config set app/cloud_build_timeout 1800
 
-gcloud app deploy 
+gcloud app deploy
