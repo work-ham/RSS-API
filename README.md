@@ -74,7 +74,7 @@ _Below is an example of how this app will be deployed with app engine this is ho
 <!-- CONTACT -->
 ### Contact
 Ilham - [Github](https://github.com/work-ham), [LinkedIn](https://www.linkedin.com/in/ilham-kus/) <br>
-Wawan - [LinkedIn](https://www.linkedin.com/in/wawan11/)
+Wawan - [Github](https://github.com/wawn11), [LinkedIn](https://www.linkedin.com/in/wawan11/)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
