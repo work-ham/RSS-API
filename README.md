@@ -1,133 +1,78 @@
-# API RSS
+## You are now in the Cloud Computing repository of RSS(Road Sign Spotter)-sql-rest-api.
 
-<p> In order the code to run, 
-  NPM install on terminal and make .env file include</p>
-  
-<p>PORT=8000</p>
-<p>DB_HOST=localhost / YOUR_DB_URL</p>
-<p>DB_USER=YOUR_DB USER</p>
-<p>DB_PASSWORD= YOUR_DB_PASSWORD</p>
-<p>DB_NAME= YOUR_DB_NAME</p>
-<p>SECRET_KEY=YOUR_SECRET_KEY</p>
+## What is this repository about?
 
-<p> SQL SCHEMA: <br>
-  
-  
-       CREATE TABLE users (
-       id INT PRIMARY KEY AUTO_INCREMENT,
-       username VARCHAR(255) NOT NULL UNIQUE,
-       email VARCHAR(255) NOT NULL UNIQUE,
-       password VARCHAR(255) NOT NULL,
-       name VARCHAR(255) NOT NULL
-       );   
-</p>
-<p>LIST OF ENDPOINT URL <br>
-  
-    User Registration:
-        URL:/auth/register
-        METHOD: POST
-        Request Body:
-        {
-        "email": "johndoe@example.com", as string must unique
-        "username": "johndoe", as string must unique
-        "password": "password123" as string 
-        "name": "John Doe", as string 
-        }
-        Response: 
-        {
-    "message": "Login successful",
-    "name": "John Doe",
-    "username": "Jhondoe"
-        }
+Hello and welcome to RSS(Road Sign Spotter)-sql-rest-api project repository for the cloud computing! 
 
+As the we mentioned before, this repository is used as the primary working repository for cloud computing side of the RSS(Road Sign Spotter) project done as part of Bangkit 2023's Product-based Capstone Project built in Node JS with Express JS and Python with Flask.
 
-    User Login:
-        URL:/auth/login
-        METHOD: POST
-        Request Body: 
-        {
-        "identification": "johndoe@example.com", as string 
-        "password": "password123"as string 
-        }
-        Response:
-        {
-         "message": "User login successful", as string 
-         "name": "jhon Doe", as string 
-         "username": "johndoe", as string 
-         "email": "johndoe@example.com", as string 
-         "userId": 2, as integer
-         "token": "JWT_TOKEN" as string 
-        }
+<p align="right">(<a href="#top">back to top</a>)</p>
+### This applications built with
 
-    Get User Profile:
-        URL:/auth/profile
-        METHOD: GET
-        Header: Authentication : Bearer JWT_TOKEN
-        Response: 
-        {
-        "id": "123456", as integer
-        "name": "John Doe", as string 
-        "email": "john@example.com", as string 
-        "username": "johndoe" as string 
-        }
+* [Express JS](https://expressjs.com/)
+* [Flask](https://flask.palletsprojects.com/en/2.3.x/)
+* other libraries included in "package.json" and "requiremnts.txt" file
 
-        
-    Change Password:
-        URL:/auth/change-password
-        METHOD: POST
-        Header: Authentication : Bearer JWT_TOKEN
-        Request Body:
-        { 
-        "userId": "123456789", as integer
-        "currentPassword": "oldPassword", as string 
-        "newPassword": "newPassword" as string 
-        }
-        Response:
-        {
-        "message": "Password changed successfully" as string 
-        }
+<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- GETTING STARTED -->
+## Getting Started
+
+Before replicating this project, make sure you have [Git](https://git-scm.com/downloads) installed on your computer.
+
+### Prerequisites
+
+Open your terminal and install the latest Node Package Manager and pip
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+* pip
+  ```sh
+  pip install -r requirements.txt
+  ```
+### Installation RSS(Road Sign Spotter) rest API
+_Below is an example of how you can instruct this app will be deployed with app engine this is how the installation_
+1. Go to [Google Cloud Platform](https://console.cloud.google.com/)
+2. Open Cloudshell
+3. Clone the repo
+   ```sh
+   git clone https://github.com/work-ham/RSS-API.git
+   ```
+5. Go to search field and search for SQL service
+6. Create an Instance, and choose mySQL
+7. select MySQL 5.7 for Database version
+8. Click on "show configuration option and select "machine type"
+9. Click the drop down box and choose standard machine (1 vCPU, 3.75 GB)
+10. Storage type SSD and select the capacity 10GB. Don't forget to checklist "Enable automatic storage increases"
+11.  Expand the connections setting, checklist on public IP then click add network, fill the network with "0.0.0.0/0", click done.
+12.  And create Instance
+13.  In Cloud Sql Overview click on "OPEN CLOUD SHELL" hit ENTER and you will ask to input your database password
+14.  Create your database with
+     >> CREATE DATABASE DATABASE_NAME;
+16.  Open your database in mysql
+17.  Create table with sql query in "database.sql"
+18.  Exit from mysql 
+19.  Move to API-RSS Directory with:
+     ```sh
+     cd API-RSS
+     ```
+21.  Click on Open Editor open deploy.sh and change to your configuration:
+     >> DATABASE_PUBLIC_IP="YOUR_DATABASE_PUBLIC_IP" <br>
+     >> DATABASE_PASSWORD="YOUR_DATABASE_PASSWORD"<br>
+     >> DATABASE_NAME="YOUR_DATABASE_NAME"<br>
+     >> API_KEY="YOUR_API_KEY"<br>
+23.  Open Terminal give permission to run deploy.sh in cloudshell terminal:
+     ```sh
+     sudo chmod +x deploy.sh
+     ```
+24.  Run deploy.sh with:
+     ```sh
+     ./deploy.sh
+     ```
+##Contact
+Ilham - [Github](https://github.com/work-ham), [LinkedIn](https://www.linkedin.com/in/ilham-kus/)
+Wawan - [LinkedIn](https://www.linkedin.com/in/wawan11/)
 
 
-    Change Username:
-        URL:/auth/change-username
-        METHOD: POS
-        Header: Authentication : Bearer JWT_TOKEN
-        Request Body:
-        {
-        "userId": "123456789", as integer
-        "newUsername": "newUsername" as string 
-        }
-        Response:
-        {
-         "message": "Username changed successfully" as string 
-        }
 
 
-    Change Email:
-        URL:/auth/change-email
-        METHOD: POST
-        Header: Authentication : Bearer JWT_TOKEN
-        Request Body:
-        { 
-        "userId": "123456789", as integer
-        "newEmail": "newemail@example.com" as string 
-        }
-        Response:
-         {
-         "message": "Email changed successfully" as string 
-         }
-
-    Delete Profile:
-        URL:/auth/delete-profile
-        METHOD: DELETE
-        Header: Authentication : Bearer JWT_TOKEN
-        Request Body:
-        { 
-        "userId": "123456789" as string 
-        }
-        Response:
-        {
-        "message": "Profile deleted successfully" as string 
-        }
-
-  </p>
