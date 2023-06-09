@@ -11,7 +11,7 @@ As the we mentioned before, this repository is used as the primary working repos
 
 * [Express JS](https://expressjs.com/)
 * [Flask](https://flask.palletsprojects.com/en/2.3.x/)
-* other libraries included in "package.json" and "requiremnts.txt" file
+* other libraries included in "package.json" and "requirements.txt" file
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -73,7 +73,7 @@ _Below is an example of how this app will be deployed with app engine this is ho
 
 <!-- CONTACT -->
 ### Contact
-Ilham - [Github](https://github.com/work-ham), [LinkedIn](https://www.linkedin.com/in/ilham-kus/)
+Ilham - [Github](https://github.com/work-ham), [LinkedIn](https://www.linkedin.com/in/ilham-kus/) <br>
 Wawan - [LinkedIn](https://www.linkedin.com/in/wawan11/)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
