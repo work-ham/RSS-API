@@ -31,7 +31,7 @@ Open your terminal and install the latest Node Package Manager and pip
   pip install -r requirements.txt
   ```
 ### Installation RSS(Road Sign Spotter) rest API
-_Below is an example of how you can instruct this app will be deployed with app engine this is how the installation_
+_Below is an example of how this app will be deployed with app engine this is how the installation_
 1. Go to [Google Cloud Platform](https://console.cloud.google.com/)
 2. Open Cloudshell
 3. Clone the repo
