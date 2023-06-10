@@ -9,7 +9,7 @@ API_KEY="YOUR_API_KEY"
 mv "$FOLDER_NAME" ../
 
 echo "runtime: nodejs18" > ./app.yaml
-echo "service: backend" >> ./app.yaml
+echo "service: default" >> ./app.yaml
 echo "" >> ./app.yaml
 echo "env_variables:" >> ./app.yaml
 echo "  PORT: \"8080\"" >> ./app.yaml
@@ -43,8 +43,8 @@ echo "  operating_system: \"ubuntu22\"" >> ./app.yaml
 echo "  runtime_version: \"3.11\"" >> ./app.yaml
 echo "" >> ./app.yaml
 echo "resources:" >> ./app.yaml
-echo "  cpu: 2" >> ./app.yaml
-echo "  memory_gb: 8" >> ./app.yaml
+echo "  cpu: 1" >> ./app.yaml
+echo "  memory_gb: 0.6" >> ./app.yaml
 echo "  disk_size_gb: 30" >> ./app.yaml
 echo "" >> ./app.yaml
 echo "automatic_scaling:" >> ./app.yaml
