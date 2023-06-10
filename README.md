@@ -3,7 +3,20 @@
 ## What is this repository about?
 
 Hello and welcome to RSS(Road Sign Spotter)-sql-rest-api project repository for the cloud computing! 
+## What is this repository about?
 
+Hello and welcome to RSS(Road Sign Spotter)-sql-rest-api project repository for the cloud computing! 
+
+As the we mentioned before, this repository is used as the primary working repository for cloud computing side of the RSS(Road Sign Spotter) project done as part of Bangkit 2023's Product-based Capstone Project built in Node JS with Express JS and Python with Flask.
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### This applications built with
+
+* [Express JS](https://expressjs.com/)
+* [Flask](https://flask.palletsprojects.com/en/2.3.x/)
+* other libraries included in "package.json" and "requirements.txt" file
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 As the we mentioned before, this repository is used as the primary working repository for cloud computing side of the RSS(Road Sign Spotter) project done as part of Bangkit 2023's Product-based Capstone Project built in Node JS with Express JS and Python with Flask.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -16,9 +29,12 @@ As the we mentioned before, this repository is used as the primary working repos
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started
+## Getting Started
 
 Before replicating this project, make sure you have [Git](https://git-scm.com/downloads) installed on your computer.
+Before replicating this project, make sure you have [Git](https://git-scm.com/downloads) installed on your computer.
 
+### Prerequisites
 ### Prerequisites
 
 Open your terminal and install the latest Node Package Manager and pip
