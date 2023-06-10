@@ -54,7 +54,7 @@ _Below is an example of how this app will be deployed with app engine this is ho
 18.  Exit from mysql 
 19.  Move to API-RSS Directory with:
      ```sh
-     cd API-RSS
+     cd RSS-API
      ```
 21.  Click on Open Editor open deploy.sh and change to your configuration:
      >> DATABASE_PUBLIC_IP="YOUR_DATABASE_PUBLIC_IP" <br>
