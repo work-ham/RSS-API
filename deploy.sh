@@ -9,7 +9,7 @@ API_KEY="YOUR_API_KEY"
 mv "$FOLDER_NAME" ../
 
 echo "runtime: nodejs18" > ./app.yaml
-echo "service: backend" >> ./app.yaml
+echo "service: default" >> ./app.yaml
 echo "" >> ./app.yaml
 echo "env_variables:" >> ./app.yaml
 echo "  PORT: \"8080\"" >> ./app.yaml
