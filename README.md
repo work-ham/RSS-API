@@ -34,7 +34,7 @@ Open your terminal and install the latest Node Package Manager and pip
 _Below is an example of how this app will be deployed with app engine this is how the installation_
 1. Go to [Google Cloud Platform](https://console.cloud.google.com/)
 2. Open Cloudshell
-3. Clone the repo
+3. Clone the repository
    ```sh
    git clone https://github.com/work-ham/RSS-API.git
    ```
