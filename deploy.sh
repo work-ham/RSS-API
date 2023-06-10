@@ -44,7 +44,7 @@ echo "  runtime_version: \"3.11\"" >> ./app.yaml
 echo "" >> ./app.yaml
 echo "resources:" >> ./app.yaml
 echo "  cpu: 1" >> ./app.yaml
-echo "  memory_gb: 0.6" >> ./app.yaml
+echo "  memory_gb: 1.8" >> ./app.yaml
 echo "  disk_size_gb: 30" >> ./app.yaml
 echo "" >> ./app.yaml
 echo "automatic_scaling:" >> ./app.yaml
