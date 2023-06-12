@@ -1,5 +1,11 @@
 # You are now in the Cloud Computing repository of RSS(Road Sign Spotter)-sql-rest-api.
+<p align="center"> <img src="https://camo.githubusercontent.com/36dbcc9bdc12216ead37e45f90f041f4cf64130ce72521561f1d6b25e3681246/68747470733a2f2f692e6962622e636f2f3956634a4e487a2f6c6f676f2d7273732e706e67" width="150" height="150" /> </p>
 
+<div align="center">
+  <p align="center">
+    <a href="https://github.com/fajararahman14/RoadSignSpotter-RSS-"><strong>Back to the main repository</strong></a>
+  </p>
+</div>
 ## What is this repository about?
 
 Hello and welcome to RSS(Road Sign Spotter)-sql-rest-api project repository for the cloud computing! 
