@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: Traffic Sign Detector API
-  description: API documentation for the Traffic Sign Detector mobile app
+  title: Road Sign Spotter API
+  description: API documentation for the Road Sign Spotter mobile app
   version: 1.0.0
 servers:
   - url: http://localhost:8080
