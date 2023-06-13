@@ -6,6 +6,7 @@
     <a href="https://github.com/fajararahman14/RoadSignSpotter-RSS-"><strong>Back to the main repository</strong></a>
   </p>
 </div>
+<p align="right">(<a href="#top">back to top</a>)</p>
 ## What is this repository about?
 
 Hello and welcome to RSS(Road Sign Spotter)-sql-rest-api project repository for the cloud computing! 
