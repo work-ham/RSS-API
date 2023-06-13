@@ -75,7 +75,7 @@ _Below is an example of how this app will be deployed with app engine this is ho
      ```sh
      ./deploy.sh
      ```
-For cheaper solution you can also  deploy the Machine learning model API with [Cloud Run](https://cloud.google.com/run?hl=id) by select image in container registry
+For cheaper solution you can also  deploy the Machine learning model API with [Cloud Run](https://cloud.google.com/run?hl=id) by select the machinelearning service container image in container registry
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
